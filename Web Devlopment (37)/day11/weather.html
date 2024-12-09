@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="App">
+        <h1>Weather App</h1>
+        <form action="" class="search-form" id="searchform">
+            <input 
+            type="text"
+            placeholder="Enter City Name"
+            class="search-input"
+            id="cityinput"
+            value="Delhi"
+            >
+            <button type="submit"  class="search-button">Search</button>
+            
+        </form>
+        <p 
+        id="loadingmsg"
+        style="display: none;
+        text-align: center;"
+        > Loading...</p>
+
+        <p 
+        id="errormsg"
+        class="error-msg"
+        style="display: none;">
+        </p>
+
+        <p 
+        id="weatherdetails"
+        class="weather-details"
+        style="display: none;">
+        </p>
+    </div>
+
+    <script>
+        const searchform = document.getElementById('searchform');
+        const cityinput = document.getElementById('cityinput');
+        const loadingmsg = document.getElementById('loadingmsg');
+        const errormsg = document.getElementById('errormsg');
+        const weatherdetails = document.getElementById('weatherdetails');
+
+        // async func fetchweather(city)
+
+        const fetchweather = async (city) => {
+            try{
+                loadingmsg.style.display='block';
+                errormsg.style.display='none';
+                weatherdetails.style.display='none';
+
+                const response = await fetch(
+                    `http://api.weatherapi.com/v1/current.json?key=3f8d75f1707041609d252923240912&q=${city}&aqi=no`
+                );
+
+                if(!response.ok){
+                    throw new Error("Failed to weather data")
+                }
+
+                const data = await response.json();
+                console.log(data)
+                displayWeather(data);
+
+            }catch (err) {
+                errormsg.textContent = 'Failed to fetchb weather data. PLease check the city name.';
+                errormsg.style.display = 'block';
+            }finally{
+                loadingmsg.style.display= 'none';
+            }
+        }
+
+        searchform.addEventListener('submit',(e)=>{
+            e.preventDefault();
+            const city = cityinput.value.trim();
+            if(city){
+                fetchweather(city);
+            }
+        })
+
+        // initial fetch for delhi
+        fetchweather('Delhi')
+
+        function displayWeather(weather){
+            weatherdetails.innerHTML
+        }
+    </script>
+</body>
+</html>

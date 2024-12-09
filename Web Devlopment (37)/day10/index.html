@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #box{
+            height: 300px;
+            width: 300px;
+            background-color: gray;
+            border-radius: 50%;
+        }
+        .section{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            gap: 100px;
+        }
+    </style>
+
+</head>
+<body>
+    <div class="section">
+        <div id="box" draggable="true">
+        
+        </div>
+        <div id="box" class="suntwo" draggable=""true>
+
+        </div>
+    </div>
+
+    <script>
+        const sunlight=()=>{
+            let
+            sun=document.getElementById('box')
+            let
+            suntwo=document.getElementsByClassName('suntwo')[0]
+
+            sun.addEventListener("mouseenter",()=>{
+                sun.style.boxShadow="10px 10px 100px 10px yellow";
+                sun.style.backgroundColor="yellow";
+            })
+
+            sun.addEventListener("dragleave",()=>{
+                sun.style.boxShadow="10px 10px 100px 10px gray";
+                sun.style.backgroundColor="gray";
+            })
+
+
+            //suntwo
+
+            suntwo.addEventListener("dragenter",()=>{
+                suntwo.style.boxShadow="10px 10px 100px 10px yellow";
+                suntwo.style.backgroundColor="yellow";
+            })        
+    }
+    sunlight()
+    </script>
+</body>
+</html>

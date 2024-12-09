@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .abc{
+            font-style: oblique;
+            color:black;
+            background-color: pink;
+            text-align: center;
+            font-size: 50px;
+            box-shadow: 10px 10px 15px darkorange;
+            
+        }
+        .abcd{
+            font-style: italic;
+            color: red;
+            background-color: yellowgreen;
+            text-align: center;
+            font-size: 25px;
+
+        }
+        .main{
+            margin: 10px 20px;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-size: medium;
+            background-color: burlywood;
+            
+            text-shadow: cadetblue;
+            text-align: center;
+            color: darkslategrey;
+            padding: 10px 0px;
+            margin: 15px;
+            border-radius: 50%;
+            box-shadow: 10px 10px 15px greenyellow;
+            
+            
+        
+        
+        }
+        input{
+            color: burlywood;
+            text-align: center;
+            font-style: italic;
+        }
+
+    </style>
+</head>
+<body>
+    <h1 class="abc">Survey Form</h1>
+    <h3 class="abcd">Let us know how we can improve freeCodeCamp</h3>
+    <form action="">
+        <div class="main">
+            
+            <br> 
+            <label >Name</label>
+            <input type="text" required>
+            <br><br>
+            <label  for="">Email</label>
+            <input type="email" required>
+            <br><br>
+            <label  for="">Age</label>
+            <input type="age" required>
+            <br> <br><br>
+            <label  for="">Which Option best describes your current role?</label>
+            <select name="" id="">
+                <option value="">Student</option>
+                <option value="">Teacherr</option>
+                <option value="">Staff</option>
+            </select> 
+            <br><br><br>
+            <label  for="">How likely is thst you recommend freecodecamp to a friend?</label>
+            <br>
+            <input  name="abc" type="radio">Definitely
+            <br>
+            <input  name="abc" type="radio">Maybe 
+            <br>
+            <input  name="abc" type="radio">Not sure
+            <br><br><br>
+            <label  for="">What do you like most in FCC</label>
+
+            <select name="" id="">
+                <option>Everything</option>
+                <option>Nothing</option>
+            </select>
+            <br><br><br>
+            <label " for="">Things that should be improved(Check all that apply)</label><br>
+            <input type="checkbox">Front end projects <br>
+            <input type="checkbox">Back end projects <br>
+            <input type="checkbox">Data visualization <br><br><br>
+            <input type="submit"> 
+        </div>             
+    </form>
+    
+</body>
+</html>

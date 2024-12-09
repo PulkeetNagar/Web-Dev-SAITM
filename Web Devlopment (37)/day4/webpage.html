@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bokor&display=swap" rel="stylesheet">
+<style>
+    *{
+        font-family: "Bokor", system-ui;
+    }
+    .parent
+    {
+        
+        background-color: aqua;
+        height: 150px;
+        width: 100vw;
+    }
+    .navbar{
+        display: flex;
+        height: 5vh;
+        align-items: center;
+        padding: 0 100px;
+    }
+    .logo{
+        flex: 1;
+        height: 1px;
+        width: 1px; 
+    }
+    .menus{
+        flex: 3;
+        align-items: flex-end;
+    }
+    .menus ul li:hover{
+        
+        background-color: red;
+        
+    }
+    .menus ul{
+        display: flex;
+        justify-content: center;
+        list-style-type: none;
+        gap: 20px;
+    }
+    .menus ul li a{
+        text-decoration: darkorange;
+        font-size: x-large;
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        
+    }
+</style>
+</head>
+<body>
+<!--flex 1 means it will take 1 by 4 area-->    
+<div class="parent">
+    <nav class="navbar">
+    
+        <div class="logo" >
+        <img src="https://e7.pngegg.com/pngimages/874/996/png-clipart-royal-enfield-logo-enfield-cycle-co-ltd-motorcycle-logo-royal-enfield-bicycle-royal-emblem-text.png" alt="" height="100px" width="100px">
+
+        </div>
+
+        <div class="menus">
+    
+            <ul>
+                <li><a href="">Home</a></li>
+                <li><a href="">Models</a></li>
+                <li><a href="">Prices</a></li>
+                <li><a href="">Offers</a></li>
+                <li><a href="">Contact</a></li>
+                <li><a href="">More</a></li>
+            </ul>
+        </div>
+    </nav>
+    
+</div>    
+</body>
+</html>

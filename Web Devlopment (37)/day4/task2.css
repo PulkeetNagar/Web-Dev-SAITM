@@ -1,0 +1,10 @@
+.parent{
+    background-image: url(https://m.media-amazon.com/images/S/pv-target-images/8a7441f348f7ebe8fe24e732e2915e08b443c23ec0222853c5fd6c0865112a21.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+}

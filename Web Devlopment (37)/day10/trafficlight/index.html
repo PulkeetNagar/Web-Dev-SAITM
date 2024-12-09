@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+        .box{
+            width: 100vw;
+            height: 100vh;
+            background-color: darkgrey;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            align-content: center;
+            
+            gap: 20px;
+        }
+        .light{
+            height: 300px;
+            width: 300px;
+            background-color:black;
+            border-radius: 100%;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="box">
+        <h1>Traffic lights</h1>
+        <div class="light" id="l1" draggable="true"></div> 
+        <div class="light" id="l2" draggable="true"></div>
+        <div class="light" id="l3" draggable="true"></div>  
+    </div>
+
+    <script>
+        const light=()=>{
+            let
+        sun1=document.getElementById('l1')
+
+        let
+        sun2=document.getElementById('l2')
+
+
+        let
+        sun3=document.getElementById('l3')
+
+
+
+        sun1.addEventListener("mouseenter",()=>{
+                sun1.style.boxShadow="10px 10px 100px 10px yellow";
+                sun1.style.backgroundColor="red";
+            })
+
+       
+        sun1.addEventListener("dragleave",()=>{
+                sun1.style.boxShadow="10px 10px 100px 10px gray";
+                sun1.style.backgroundColor="red";
+            })
+        
+
+
+        sun2.addEventListener("dragenter",()=>{
+                sun2.style.boxShadow="10px 10px 100px 10px green";
+                sun2.style.backgroundColor="yellow";
+            })  
+            
+            
+        sun2.addEventListener("dragleave",()=>{
+            sun2.style.boxShadow="10px 10px 100px 10px gray";
+            sun2.style.backgroundColor="yellow";
+            })  
+            
+        
+        sun3.addEventListener("dragenter",()=>{
+            sun3.style.boxShadow="10px 10px 100px 10px red";
+            sun3.style.backgroundColor="green";
+            })  
+            
+            
+        sun3.addEventListener("dragleave",()=>{
+            sun3.style.boxShadow="10px 10px 100px 10px gray";
+            sun3.style.backgroundColor="green";
+            })
+
+        }
+   light()
+        
+    </script>
+</body>
+
+</html>

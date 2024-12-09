@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        form{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            gap: 20px;
+
+        }
+    </style>
+</head>
+<body>
+    <form action="">
+        <h1>This is form validation.</h1>
+        <label for="">Username</label>
+        <input type="text" id="username">
+        <label for="email">Email</label>
+        <input type="email" name="" id="">
+        <label for="Password">Password</label>
+        <input type="password" id="password">
+        <label for="Confirm Password">Confirm Password</label>
+        <input type="password" id="confirmpassword">
+        <button onclick="submitform()">Submit</button>
+    </form>
+
+<!-- arrow funtcion -->
+    <script>
+        const submitform=()=>{
+            let username=document.getElementById("username").value
+            let password=document.getElementById("password").value
+            let confirmpassword=document.getElementById("confirmpassword").value
+
+            let email=document.getElementById("email").value
+
+            let emailcheck = email.includes("@") && email.includes(".")
+            console.log("Checking the form...")
+
+
+            if(!username|| !password || !confirmpassword || !email ){
+                window.alert("Please enter all the input fields.")
+                return
+            }
+            if(emailcheck != true){
+                window.alert("Please enter a valid email.")
+                return
+            }
+            if(password.length<8){
+                window.alert("Password must be atleast 8 characters.")
+                return
+            }
+            if(password!=confirmpassword){
+                window.alert("Password not matching.")
+                return
+            }
+            else{
+                window.alert("Form submitted succesfully.")
+            }
+
+            // WHY WE ARE USIMG RETURN???
+            // BCZ IT SHOULD RETURN TO STARTING PT. SO USER CAN CORRECT THE FORM AND THE PROGRAM DO NOT EXECUTE FURTHER
+
+            }
+
+
+    </script>
+</body>
+</html>

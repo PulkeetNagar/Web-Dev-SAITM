@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .parent{
+            background-color: rgb(255, 250, 250);
+            height: 100vh;
+            align-items: center;
+            display: flex;
+            justify-content: center;    
+        }
+        .childone:hover{
+            background-color:blue;
+            transform: scale(1.5);
+            transition: 1s cubic-bezier(0.165, 0.84, 0.44, 1);
+        }
+        .childone{
+            background-color: red;
+            height: 200px;
+            width: 200px;
+            text-align: center ;
+        }
+        .childtwo:hover{
+            background-color: rgb(136, 255, 0);
+        }
+        .childtwo{
+            background-color: rgb(255, 0, 234);
+            height: 200px;
+            width: 200px;
+        }
+
+    </style>
+<!--See what hover does-->
+</head>
+<body>
+    <div class="parent"> 
+        <div class="childone">
+            <h1>Home</h1>
+
+        </div>
+        <div class="childtwo">
+
+        </div>    
+ 
+    </div>
+    
+</body>
+</html>

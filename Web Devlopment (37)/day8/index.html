@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>My Name is <span id="name">Pulkeet Nagar</span></h1>
+    <button onclick="changename()">Change Your Name</button>
+    <script>
+        const changename=()=>{
+            const name = prompt("Enter Your Name")
+            document.getElementById("name").innerHTML=name
+        }
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            height: 300px;
+            width: 100vw;
+            background-color: antiquewhite;
+
+        }
+    </style>
+</head>
+<body>
+    <h1>I'd details</h1>
+    
+    
+    <div class="box">
+        <h1 id="name">Pulkeet</h1>
+        
+    </div>
+    <script>
+        
+        const changeName=()=>{
+            document.getElementById("name").style.color="orange";
+            document.getElementById("name").style.color="white";
+            document.getElementById("name").style.color="green";
+             
+            }
+    setTimeout(() => {
+    }, 2000);
+
+
+
+    const Protein = ["Paneer", "Eggs","Soyabean",1,2,3,4]
+    for(let x in Protein){
+        document.write(Protein[x] + "<br>")
+    }
+    
+
+    //push
+
+    Protein.push("BADSHAH")
+    for(let x in Protein){
+        document.write(Protein[x] + "<br>")
+    }
+
+    //pop
+
+    Protein.pop("BADSHAH")
+    for(let x in Protein){
+        document.write(Protein[x] + "<br>")
+    }
+
+    // sort()
+
+    document.write(Protein.sort())      
+    document.write(Protein.sort())
+
+
+    // sort on integers
+
+    const int = [11,23,12,43,65,12,5,67,24,4,1,34,7,8,3,47,67,4]
+    console.log( "<br>"  +  int.sort())
+
+    // asc order sort
+
+    console.log(int.sort((a,b)=>a-b))
+
+    // desc order sort
+
+    console.log(int.sort((a,b)=>b-a))
+
+    // reverse 
+
+    console.log(int.reverse())
+
+
+    // mapping -- returns a new array
+
+    int.map((x)=>{
+        console.log("AGE = " + x)
+    })
+
+
+    // foreach -- doesn't return a new array
+
+    int.forEach((x)=>{
+        console.log("AGE = " + x)
+    })
+
+    // filter
+
+    const adults = int.filter((x)=>x>17)
+    console.log(adults)
+
+    console.log(int)
+
+    // task
+
+    const retire = int.filter((x)=>x>59)
+    console.log(retire)
+
+    //slicing
+
+    const lass = ["Aman", "Ashu" , "vijay" , "khush" , "Mannu" , "Naksh"]
+
+    const slic = lass.slice(1,4)
+    console.log(slic)
+
+    // splice(from which index,how many names to be change continuosly,change1,c2,c3..)
+
+    console.log("Original array = " + lass)
+
+    const splice = lass.splice(2,3,"Sattu","Alex","Ramphal")
+
+    console.log(splice)
+
+    console.log("Changed array = " + lass)
+
+    // include = similar to membership op.( in )  like in python
+
+    const checkname=lass.includes("Suraj")
+    console.log(checkname)
+
+    console.log(lass.includes("Aman"))
+
+    //// no direct negative indexing
+
+    const negative = lass.at(-2)
+    console.log(negative)
+
+
+    // function
+
+    function myfunc(){
+        window.alert("HELP")
+    }
+
+
+    // objects,dictionaries 
+
+    let car = {
+        name : "scorpio" ,
+        brand : "mahindra",
+        color : "black"
+    }
+
+    console.log(Object.keys(car))
+
+    console.log(Object.values(car))
+
+    // nested objects
+
+    const car2={
+        name:"Fortuner",
+        brand:"Toyota",
+        color:"Chitta",
+        feature:{
+            engine:"v8",
+            top_speed:'240 km/hr'
+        }                                                              
+    }
+    
+    console.log(Object.keys(car2))
+
+    console.log(Object.values(car2))
+    </script>
+</body>
+</html>
